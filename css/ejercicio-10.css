@@ -1,0 +1,84 @@
+/* Estilos para el contenedor principal */
+.contenedor {
+  display: flex;
+  flex-direction: row;
+}
+
+/* Estilos para la barra lateral izquierda */
+.barra-lateral {
+  width: 20%;
+  background-color: #ccc;
+}
+
+/* Estilos para la lista del menú */
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu li {
+  margin-bottom: 1rem;
+}
+
+.menu li a {
+  display: block;
+  padding: 0.5rem;
+  background-color: #f2f2f2;
+  color: #333;
+  text-decoration: none;
+}
+
+.menu li a:hover {
+  background-color: #ddd;
+}
+
+/* Estilos para la sección principal */
+.contenido {
+  flex-grow: 1;
+  padding: 1rem;
+}
+
+.contenido h1 {
+  margin-top: 0;
+}
+
+@media (max-width: 640px) {
+  /* Estilos para la barra lateral cuando el viewport es menor a 640px */
+  .barra-lateral {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    background-color: #333;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .menu li {
+    margin-right: 1rem;
+  }
+
+  .menu li:last-child {
+    margin-right: 0;
+  }
+
+  .menu li a {
+    padding: 0.3rem;
+    background-color: transparent;
+    color: #fff;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.3s;
+  }
+
+  .menu li a:hover {
+    border-bottom: 2px solid #fff;
+  }
+
+  /* Estilos para la sección principal cuando el viewport es menor a 640px */
+  .contenido {
+    margin-bottom: 5rem;
+  }
+}
